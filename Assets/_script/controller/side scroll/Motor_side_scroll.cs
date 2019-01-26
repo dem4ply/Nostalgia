@@ -7,7 +7,7 @@ using System;
 
 namespace chibi.motor.npc
 {
-	public class Motor_side_scroll : Motor
+	public class Look_at : Motor
 	{
 		public override Vector3 desire_direction
 		{

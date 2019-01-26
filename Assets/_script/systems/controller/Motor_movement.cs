@@ -4,7 +4,7 @@ using chibi.motor;
 
 namespace chibi.systems.motor
 {
-	public class Motor_movement : ComponentSystem
+	public class Look_at : ComponentSystem
 	{
 		struct group
 		{

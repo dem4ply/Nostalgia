@@ -11,6 +11,7 @@ namespace chibi {
 		public bool debug_mode = false;
 		protected helper.debug.Debug debug;
 
+
 		protected virtual void Awake()
 		{
 			//debug = new helper.debug.Debug( this );

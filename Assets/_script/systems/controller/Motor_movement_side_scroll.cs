@@ -14,7 +14,7 @@ namespace chibi.systems.controller
 	{
 		struct group
 		{
-			public Motor_side_scroll motor;
+			public Look_at motor;
 			public Rigidbody rigidbody;
 		}
 
