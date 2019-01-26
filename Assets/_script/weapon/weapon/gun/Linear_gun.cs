@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using controller.controllers;
 using rol_sheet;
+using chibi.motor.weapons.gun.bullet;
 
 namespace weapon
 {
@@ -13,32 +14,19 @@ namespace weapon
 				get { return transform.forward.normalized; }
 			}
 
-			public override Bullet_controller_3d shot()
-			{
-				throw new System.NotImplementedException();
-			}
-
-			public override Bullet_controller_3d shot( Rol_sheet owner )
-			{
-				throw new System.NotImplementedException();
-			}
-
-			/*
-			public override Bullet_controller_3d shot()
+			public override Bullet_motor shot()
 			{
 				var bullet = ammo.instanciate( transform.position, owner );
 				bullet.shot( direction_shot );
 				return bullet;
 			}
 
-			public override Bullet_controller_3d shot( Rol_sheet owner )
+			public override Bullet_motor shot( Rol_sheet owner )
 			{
 				var bullet = ammo.instanciate( transform.position, owner );
 				bullet.shot( direction_shot );
 				return bullet;
 			}
-			*/
-
 
 			protected void OnDrawGizmos()
 			{

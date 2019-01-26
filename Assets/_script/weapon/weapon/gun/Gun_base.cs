@@ -2,6 +2,7 @@
 using weapon.stat;
 using weapon.ammo;
 using controller.controllers;
+using chibi.motor.weapons.gun.bullet;
 
 
 namespace weapon
@@ -29,9 +30,8 @@ namespace weapon
 				shot();
 			}
 
-			public abstract Bullet_controller_3d shot();
-			public abstract Bullet_controller_3d shot(
-				rol_sheet.Rol_sheet owner );
+			public abstract Bullet_motor shot();
+			public abstract Bullet_motor shot( rol_sheet.Rol_sheet owner );
 
 			protected override void _init_cache()
 			{
