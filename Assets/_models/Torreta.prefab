@@ -127,7 +127,9 @@ MonoBehaviour:
   derecha: 100
   izquierda: 97
   disparar: 32
+  adisparo: {fileID: 8300000, guid: e98f0b6ba3749974a9b93b26458217fc, type: 3}
   position: {fileID: 0}
+  controller: {fileID: 0}
   disparo: {fileID: 0}
 --- !u!54 &892191169055630219
 Rigidbody:
