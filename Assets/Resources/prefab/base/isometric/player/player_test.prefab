@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1494255499972346453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131031328685439791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90d00b7f7d3a28e4589dd875b1fd9eac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_mode: 0
+  is_turrent: 0
+  animator: {fileID: 864486505207966924}
 --- !u!114 &5299008171732931085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14,6 +29,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug_mode: 0
   desire_vector: {x: 0, y: 0, z: 0}
+--- !u!114 &3793002154116120261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131031328685439791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2421dac41d423e4ab24bd1e8990f72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_mode: 0
+  motor: {fileID: 0}
+  angle_vector_for_floor: {x: -1, y: 0, z: 0}
+  min_angle_for_floor: 20
+  max_angle_for_floor: 160
+  angle_vector_for_wall: {x: 0, y: 1, z: 0}
+  min_angle_for_wall: 70
+  max_angle_for_wall: 110
+  animator: {fileID: 0}
 --- !u!1001 &5331293753956827349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2691,7 +2727,8 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 7131031328156558552}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1304126863961587243, guid: 3709efad636edb7438abdb06a0d1b989, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3709efad636edb7438abdb06a0d1b989, type: 3}
 --- !u!4 &7131031329753121049 stripped
 Transform:
@@ -3614,3 +3651,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a6cf5309741f81b48aa1a102d0bdd587, type: 3}
+--- !u!95 &864486505207966924 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8337721867503019493, guid: a6cf5309741f81b48aa1a102d0bdd587,
+    type: 3}
+  m_PrefabInstance: {fileID: 8667964975673510185}
+  m_PrefabAsset: {fileID: 0}
