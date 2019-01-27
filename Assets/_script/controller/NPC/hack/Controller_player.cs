@@ -18,8 +18,7 @@ namespace chibi.controller.npc
 
 			set {
 				_turrent = value;
-				if ( value == null )
-					joystick.turrent = null;
+				joystick.turrent = value;
 			}
 		}
 
@@ -36,12 +35,12 @@ namespace chibi.controller.npc
 				transform.position = turrent.position.position;
 				desire_direction = turrent.position.forward;
 				speed = 0f;
-				joystick.turrent = turrent;
+				joystick.use_turrent = true;
 			}
 			else
 			{
-				turrent = null;
 				animator.is_turrent = false;
+				joystick.use_turrent = false;
 			}
 		}
 

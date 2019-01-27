@@ -8,11 +8,16 @@ public class giroTorreta : MonoBehaviour
 	public KeyCode derecha;
 	public KeyCode izquierda;
 	public KeyCode disparar;
+	
+	//public GameObject disparo;
+	public AudioClip adisparo;
+	
 	public Transform position;
 
 	public chibi.motor.weapons.gun.controller.Turrent_controller controller;
 
 	public GameObject disparo;
+
 
 	void FixedUpdate()
 	{
@@ -26,6 +31,9 @@ public class giroTorreta : MonoBehaviour
 		{
 			transform.Rotate( 0, Time.deltaTime * -100.0f, 0 );
 		}
+		if(Input.GetKeyDown(disparar)){
+			GetComponentInChildren<weapon.gun.Linear_gun>().shot();
+			clip1();
 		if ( Input.GetKeyDown( disparar ) )
 		{
 			//disparo.SetActive(true);
@@ -49,6 +57,7 @@ public class giroTorreta : MonoBehaviour
 	public void shot()
 	{
 		GetComponentInChildren<weapon.gun.Linear_gun>().shot();
+		clip1();
 	}
 
 	void OnTriggerEnter( Collider other )
@@ -72,4 +81,10 @@ public class giroTorreta : MonoBehaviour
 			player.turrent = null;
 		}
 	}
+	
+	void clip1 () {
+		AudioSource.PlayClipAtPoint(adisparo, new Vector3(0, 25, 0), 0.75f);
+	}
+	
+	
 }
