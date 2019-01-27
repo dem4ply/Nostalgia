@@ -9,6 +9,7 @@ namespace chibi.motor.npc
 {
 	public class Motor_isometric : Motor
 	{
+		public bool stop;
 		public override Vector3 desire_direction
 		{
 			set {
