@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 419ff85fd5d99a843a12742bef97a455, type: 3}
   m_Name: life fsadfsadf asnostalgia
   m_EditorClassIdentifier: 
-  seconds_of_life: 60
+  seconds_of_life: 15
