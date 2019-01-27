@@ -126,6 +126,29 @@ MonoBehaviour:
   prefab_damage: {fileID: 5583398779507790876, guid: 117ae03c807871f47a2eb438e8d034e9,
     type: 3}
   is_going_to_attack: 0
+--- !u!114 &2789125027128661406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754131678989981622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac8bbd6ddd2f834e87ad88e76a8f730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_mode: 0
+  stat: {fileID: 11400000, guid: e4e5021f6529cf94a8009f43e665aadd, type: 2}
+  total_of_points: 1
+  current_points: 1
+  hp_image: {fileID: 0}
+  you_insane: {fileID: 0}
+  joystick: {fileID: 0}
+  damage_mask:
+    serializedVersion: 2
+    m_Bits: 256
+  rol: {fileID: 8136419212330712434}
 --- !u!1001 &5942183304023256140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -228,6 +251,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.18846
+      objectReference: {fileID: 0}
+    - target: {fileID: 4830117482518363261, guid: 3709efad636edb7438abdb06a0d1b989,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3101304874909350045, guid: 3709efad636edb7438abdb06a0d1b989,
         type: 3}
@@ -2844,7 +2872,8 @@ PrefabInstance:
       propertyPath: m_RootBone
       value: 
       objectReference: {fileID: 8754131678462412865}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 557632456087092979, guid: 3709efad636edb7438abdb06a0d1b989, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3709efad636edb7438abdb06a0d1b989, type: 3}
 --- !u!4 &8754131678462413199 stripped
 Transform:
