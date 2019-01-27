@@ -148,6 +148,8 @@ MonoBehaviour:
   last_time_attack: 0
   prefab_damage: {fileID: 5583398779507790876, guid: 117ae03c807871f47a2eb438e8d034e9,
     type: 3}
+  prefab_particle: {fileID: 7000719957692494337, guid: 800de3d38fba2434e8afa704b90c41b8,
+    type: 3}
   is_going_to_attack: 0
 --- !u!114 &8917528667507689737
 MonoBehaviour:
