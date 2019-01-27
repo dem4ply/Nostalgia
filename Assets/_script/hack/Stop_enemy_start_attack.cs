@@ -12,6 +12,8 @@ public class Stop_enemy_start_attack : chibi.Chibi_behaviour
 		{
 			var motor = other.gameObject.GetComponent<Motor_isometric>();
 			motor.stop = true;
+			var attack = other.GetComponent< Enemy_attack >();
+			attack.is_going_to_attack = true;
 		}
 	}
 

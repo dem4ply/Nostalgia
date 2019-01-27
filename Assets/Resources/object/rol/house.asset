@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0192714091c8b7a42a248d9b7190a523, type: 3}
   m_Name: house
   m_EditorClassIdentifier: 
-  full_name: 
+  full_name: house

@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09c9f1e715fb43244aa16151be04b02d, type: 3}
-  m_Name: house
+  m_Script: {fileID: 11500000, guid: 0ef4df1141d37e44482855504a341e06, type: 3}
+  m_Name: One_hit_destroy
   m_EditorClassIdentifier: 
-  total: 200
-  current: 200
