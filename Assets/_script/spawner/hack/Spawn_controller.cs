@@ -24,6 +24,14 @@ namespace spawner
 		public float rest_time = 10f;
 		public float current_rest_time = 0f;
 
+		public List<GameObject> items;
+		public List<GameObject> cards;
+		public float wait_time = 0f;
+		public float curent_wait_time = 0f;
+		public bool read_card = true;
+
+		public int current_item = 0;
+
 		protected void Update()
 		{
 			if ( rest_mode )
@@ -33,11 +41,29 @@ namespace spawner
 				spanner_time = 0f;
 				hp_casa.current_points = hp_casa.total_of_points;
 				stop_wave();
-				current_rest_time += Time.deltaTime;
-				if ( current_rest_time > rest_time )
+				if ( read_card )
 				{
-					rest_mode = false;
-					current_rest_time = 0f;
+					current_rest_time += Time.deltaTime;
+					if ( current_rest_time > rest_time )
+					{
+						rest_mode = false;
+						current_rest_time = 0f;
+					}
+				}
+				else
+				{
+					cards[ current_item ].SetActive( true );
+					items[ current_item ].SetActive( true );
+					curent_wait_time += Time.deltaTime;
+					if ( curent_wait_time > wait_time )
+					{
+						if ( Input.anyKey )
+						{
+							cards[ current_item ].SetActive( false );
+							read_card = true;
+							++current_item;
+						}
+					}
 				}
 			}
 			else
@@ -63,9 +89,12 @@ namespace spawner
 						helper.consts.tags.enemy );
 					foreach ( var o in e )
 					{
-						var h = GetComponent<Enemy_attack>();
-						h.died();
+						var h = o.GetComponent<Enemy_attack>();
+						if ( h )
+							h.died();
 					}
+					read_card = false;
+					curent_wait_time = 0f;
 				}
 			}
 		}
