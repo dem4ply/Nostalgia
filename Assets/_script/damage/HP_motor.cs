@@ -29,12 +29,14 @@ namespace damage
 			public virtual void take_damage( Damage damage )
 			{
 				current_points -= damage.amount;
+				Debug.Log( current_points );
 				if ( is_dead )
 				{
 					Debug.Log( string.Format(
 						"[HP_motor] murio: {0}",
 						helper.game_object.name.full( gameObject ) ) );
-					joystick.you_died = true;
+					if ( joystick )
+						joystick.you_died = true;
 					if( you_insane )
 						you_insane.gameObject.SetActive( true );
 				}
