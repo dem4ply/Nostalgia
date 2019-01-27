@@ -57,6 +57,7 @@ namespace spawner
 			stop_wave();
 			int spanner_post = new System.Random().Next( 0, spanner.Count );
 			Debug.Log( spanner[ spanner_post ].name );
+			spanner[ spanner_post ].SetActive( true );
 		}
 
 		public void start_wave()
