@@ -10,5 +10,7 @@ namespace chibi.motor.behavior
 	public class Look_at_motor_forward : chibi.Chibi_behaviour
 	{
 		public Vector3 desire_vector;
+
+		public bool ignore;
 	}
 }

@@ -15,20 +15,6 @@ MonoBehaviour:
   debug_mode: 0
   is_turrent: 0
   animator: {fileID: 864486505207966924}
---- !u!114 &5299008171732931085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7131031328685439791}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2ead4776127aa00418f3f1678890ce26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug_mode: 0
-  desire_vector: {x: 0, y: 0, z: 0}
 --- !u!114 &3793002154116120261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50,6 +36,20 @@ MonoBehaviour:
   min_angle_for_wall: 70
   max_angle_for_wall: 110
   animator: {fileID: 0}
+--- !u!114 &5299008171732931085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7131031328685439791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ead4776127aa00418f3f1678890ce26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug_mode: 0
+  desire_vector: {x: 0, y: 0, z: 0}
 --- !u!1001 &5331293753956827349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -61,6 +61,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: player_test
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101304874380377082, guid: 3709efad636edb7438abdb06a0d1b989,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 3101304874380377078, guid: 3709efad636edb7438abdb06a0d1b989,
         type: 3}
