@@ -11,6 +11,7 @@ namespace chibi.joystick
 	public class Joystick_nostalgia : Joystick
 	{
 		public giroTorreta turrent;
+		public bool use_turrent;
 		#region funciones protegdas
 		protected override void Update()
 		{
@@ -21,7 +22,7 @@ namespace chibi.joystick
 				c.joystick = this;
 			if ( is_pass_deadzone_esdf_axis )
 			{
-				if ( c != null && turrent == null )
+				if ( c != null && !use_turrent )
 				{
 					c.desire_direction = axis_esdf;
 					c.speed = 1f;
@@ -33,7 +34,7 @@ namespace chibi.joystick
 			}
 			else
 			{
-				if ( c != null && turrent == null )
+				if ( c != null && !use_turrent )
 				{
 					c.desire_direction = Vector3.zero;
 					c.speed = 1f;
@@ -52,7 +53,7 @@ namespace chibi.joystick
 			}
 			if ( _fire_key_down( 2 ) )
 			{
-				if ( turrent )
+				if ( turrent && use_turrent )
 					turrent.shot();
 			}
 			if ( _fire_key_down( 3 ) )
