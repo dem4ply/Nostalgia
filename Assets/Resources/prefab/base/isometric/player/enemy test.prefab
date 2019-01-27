@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2690102715443327719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8754131678989981622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4acab47ade767d4196995b9d4aa53bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &8136419212330712434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,19 +28,6 @@ MonoBehaviour:
   debug_mode: 0
   faction: {fileID: 11400000, guid: 93f88b5652adb7945aedfadf2cf3a196, type: 2}
   person: {fileID: 11400000, guid: 58c912f7601ec7f4e9b9da2bac87dceb, type: 2}
---- !u!114 &2690102715443327719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8754131678989981622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4acab47ade767d4196995b9d4aa53bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!1001 &5942183304023256140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39,6 +39,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemy test
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101304874380377082, guid: 3709efad636edb7438abdb06a0d1b989,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemy
       objectReference: {fileID: 0}
     - target: {fileID: 557632456087092979, guid: 3709efad636edb7438abdb06a0d1b989,
         type: 3}
