@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 namespace damage
 {
@@ -9,6 +10,7 @@ namespace damage
 			public stat.Hp_stat stat;
 			[HideInInspector] public float total_of_points = 1;
 			[HideInInspector] public float current_points = 1;
+			public Image hp_image;
 
 			public LayerMask damage_mask;
 			//public controller.motor.Motor_base motor;
@@ -63,6 +65,8 @@ namespace damage
 					return;
 				take_damage( damage );
 				damage.taken( this );
+				if( hp_image )
+					hp_image.fillAmount = current_points / total_of_points;
 			}
 
 			protected virtual void log_trigger( Collider other )
