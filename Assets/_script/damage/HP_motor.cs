@@ -11,6 +11,7 @@ namespace damage
 			[HideInInspector] public float total_of_points = 1;
 			[HideInInspector] public float current_points = 1;
 			public Image hp_image;
+			public Text you_insane;
 
 			public chibi.joystick.Joystick_nostalgia joystick;
 
@@ -34,6 +35,8 @@ namespace damage
 						"[HP_motor] murio: {0}",
 						helper.game_object.name.full( gameObject ) ) );
 					joystick.you_died = true;
+					if( you_insane )
+						you_insane.gameObject.SetActive( true );
 				}
 			}
 
