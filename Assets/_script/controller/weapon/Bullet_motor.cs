@@ -17,6 +17,7 @@ namespace chibi.motor.weapons.gun.bullet
 		{
 			desire_direction = direction_shot;
 			desire_speed = max_speed;
+			transform.rotation = Quaternion.LookRotation( direction_shot );
 		}
 	}
 }

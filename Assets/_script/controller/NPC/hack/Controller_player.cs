@@ -8,6 +8,11 @@ namespace chibi.controller.npc
 	{
 		public motor.animator.Player_0 animator;
 
+		public virtual void take_torreta()
+		{
+			animator.is_turrent = !animator.is_turrent;
+		}
+
 		protected override void load_motors()
 		{
 			base.load_motors();

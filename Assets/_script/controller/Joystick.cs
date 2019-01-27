@@ -63,7 +63,7 @@ namespace chibi.joystick
 		#endregion
 
 		#region funciones protegdas
-		protected void Update()
+		protected virtual void Update()
 		{
 			update_all_axis();
 			update_all_buttons();
@@ -141,13 +141,13 @@ namespace chibi.joystick
 		/// <returns></returns>
 		protected bool _fire_key_down( int fire_number )
 		{
-			string fire_key = string.Format( "fire_{0}", fire_number );
+			string fire_key = string.Format( "fire{0}", fire_number );
 			return Input.GetButtonDown( fire_key );
 		}
 
 		protected bool _fire_key_up( int fire_number )
 		{
-			string fire_key = string.Format( "fire_{0}", fire_number );
+			string fire_key = string.Format( "fire{0}", fire_number );
 			return Input.GetButtonUp( fire_key );
 		}
 
