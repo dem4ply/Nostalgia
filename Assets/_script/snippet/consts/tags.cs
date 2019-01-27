@@ -13,7 +13,7 @@ namespace helper
 			public static string scenary
 			{
 				get {
-					return "asdf";
+					return "scenary";
 				}
 			}
 
@@ -21,6 +21,13 @@ namespace helper
 			{
 				get {
 					return "Player";
+				}
+			}
+
+			public static string enemy
+			{
+				get {
+					return "enemy";
 				}
 			}
 		}

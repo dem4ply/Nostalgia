@@ -24,6 +24,8 @@ namespace chibi.systems.controller
 			float delta_time = Time.deltaTime;
 			foreach ( var entity in GetEntities<group>() )
 			{
+				if ( entity.motor.stop )
+					continue;
 				Vector3 desire_velocity = entity.motor.desire_velocity;
 				entity.rigidbody.velocity = new Vector3(
 					desire_velocity.x, entity.rigidbody.velocity.y,
