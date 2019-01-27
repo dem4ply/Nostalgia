@@ -12,11 +12,16 @@ namespace chibi.joystick
 	{
 		public giroTorreta turrent;
 		public bool use_turrent;
+		public bool you_died = false;
+		public damage.motor.HP_motor hp_house;
+
 		#region funciones protegdas
 		protected override void Update()
 		{
 			update_all_axis();
 			update_all_buttons();
+			if ( you_died )
+				return;
 			var c = controller as Controller_player;
 			if ( c != null )
 				c.joystick = this;
@@ -60,6 +65,13 @@ namespace chibi.joystick
 			{
 				//YAMATO
 			}
+		}
+
+		protected override void _init_cache()
+		{
+			base._init_cache();
+			if ( !hp_house )
+				Debug.LogError( "el hp de la casa no esta asignado al joystick" );
 		}
 		#endregion
 	}

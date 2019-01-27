@@ -12,6 +12,8 @@ namespace damage
 			[HideInInspector] public float current_points = 1;
 			public Image hp_image;
 
+			public chibi.joystick.Joystick_nostalgia joystick;
+
 			public LayerMask damage_mask;
 			//public controller.motor.Motor_base motor;
 			public rol_sheet.Rol_sheet rol;
@@ -31,6 +33,7 @@ namespace damage
 					Debug.Log( string.Format(
 						"[HP_motor] murio: {0}",
 						helper.game_object.name.full( gameObject ) ) );
+					joystick.you_died = true;
 				}
 			}
 
