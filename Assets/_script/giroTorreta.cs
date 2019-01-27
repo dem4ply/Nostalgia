@@ -9,7 +9,8 @@ public class giroTorreta : MonoBehaviour
 	public KeyCode izquierda;
 	public KeyCode disparar;
 	
-	public GameObject disparo;
+	//public GameObject disparo;
+	public AudioClip adisparo;
 	
 	void FixedUpdate()
     {
@@ -22,6 +23,7 @@ public class giroTorreta : MonoBehaviour
 		}
 		if(Input.GetKeyDown(disparar)){
 			GetComponentInChildren<weapon.gun.Linear_gun>().shot();
+			clip1();
 			//disparo.SetActive(true);
 			//disparo.SetActive(false);
 		}
@@ -33,6 +35,10 @@ public class giroTorreta : MonoBehaviour
 			Debug.Log("Colision con torreta");
 		}
 		
+	}
+	
+	void clip1 () {
+		AudioSource.PlayClipAtPoint(adisparo, new Vector3(0, 25, 0), 0.75f);
 	}
 	
 	

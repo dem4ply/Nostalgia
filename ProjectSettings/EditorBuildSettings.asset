@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Video.unity
     guid: b13aac8b860d6604bb410c14ed100174
+  - enabled: 1
+    path: Assets/Videoloop.unity
+    guid: b1836bfb6776802439eabc36b4a13a3c
+  - enabled: 1
+    path: Assets/Resources/scene/init copia.unity
+    guid: 277fa4e0879fc7b47bd31048270b6467
   m_configObjects: {}
