@@ -21,6 +21,9 @@ namespace spawner
 
 		public damage.motor.HP_motor hp_casa;
 
+		public float rest_time = 10f;
+		public float current_rest_time = 0f;
+
 		protected void Update()
 		{
 			if ( rest_mode )
@@ -30,6 +33,12 @@ namespace spawner
 				spanner_time = 0f;
 				hp_casa.current_points = hp_casa.total_of_points;
 				stop_wave();
+				current_rest_time += Time.deltaTime;
+				if ( current_rest_time > rest_time )
+				{
+					rest_mode = false;
+					current_rest_time = 0f;
+				}
 			}
 			else
 			{
@@ -48,7 +57,16 @@ namespace spawner
 				}
 				current_time += Time.deltaTime;
 				if ( current_time > wave_times[ current_wave ] )
+				{
 					rest_mode = true;
+					var e = GameObject.FindGameObjectsWithTag(
+						helper.consts.tags.enemy );
+					foreach ( var o in e )
+					{
+						var h = GetComponent<Enemy_attack>();
+						h.died();
+					}
+				}
 			}
 		}
 

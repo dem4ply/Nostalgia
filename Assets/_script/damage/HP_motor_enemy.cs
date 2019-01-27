@@ -11,7 +11,11 @@ namespace damage
 			{
 				base.take_damage( damage );
 				if ( is_dead )
-					Destroy( gameObject );
+				{
+					var e = GetComponent<Enemy_attack>();
+					if ( e )
+						e.died();
+				}
 			}
 		}
 	}

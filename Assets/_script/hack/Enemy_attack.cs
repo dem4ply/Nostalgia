@@ -9,6 +9,7 @@ public class Enemy_attack : chibi.Chibi_behaviour
 	public float attack_by_second = 2f;
 	public float last_time_attack = 0f;
 	public GameObject prefab_damage;
+	public GameObject prefab_particle;
 
 	public bool is_going_to_attack = false;
 
@@ -28,6 +29,13 @@ public class Enemy_attack : chibi.Chibi_behaviour
 			return;
 		}
 		helper.instantiate._( prefab_damage, attack_position );
+	}
+
+	public void died()
+	{
+		if ( prefab_particle )
+			helper.instantiate._( prefab_particle, transform.position );
+		Destroy( gameObject );
 	}
 
 	protected void OnDrawGizmos()

@@ -29,7 +29,6 @@ namespace damage
 			public virtual void take_damage( Damage damage )
 			{
 				current_points -= damage.amount;
-				Debug.Log( current_points );
 				if ( is_dead )
 				{
 					Debug.Log( string.Format(
