@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09c9f1e715fb43244aa16151be04b02d, type: 3}
   m_Name: enemy_1
   m_EditorClassIdentifier: 
-  total: 200
-  current: 200
+  total: 1
+  current: 1
