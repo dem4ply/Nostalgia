@@ -30,6 +30,12 @@ namespace spawner
 		public float curent_wait_time = 0f;
 		public bool read_card = true;
 
+
+		public chibi.joystick.Joystick joystick;
+
+
+		public GameObject youwin;
+
 		public int current_item = 0;
 
 		protected void Update()
@@ -57,6 +63,9 @@ namespace spawner
 					curent_wait_time += Time.deltaTime;
 					if ( curent_wait_time > wait_time )
 					{
+						cards[ current_item ].SetActive( false );
+						read_card = true;
+						++current_item;
 						if ( Input.anyKey )
 						{
 							cards[ current_item ].SetActive( false );
@@ -97,13 +106,19 @@ namespace spawner
 					curent_wait_time = 0f;
 				}
 			}
+
+			if ( current_item >= items.Count )
+			{
+				youwin.SetActive( true );
+				joystick.gameObject.SetActive( false );
+				gameObject.SetActive( false );
+			}
 		}
 
 		public void change_spaner()
 		{
 			stop_wave();
 			int spanner_post = new System.Random().Next( 0, spanner.Count );
-			Debug.Log( spanner[ spanner_post ].name );
 			spanner[ spanner_post ].SetActive( true );
 		}
 
