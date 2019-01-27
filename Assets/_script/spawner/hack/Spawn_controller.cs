@@ -63,9 +63,6 @@ namespace spawner
 					curent_wait_time += Time.deltaTime;
 					if ( curent_wait_time > wait_time )
 					{
-						cards[ current_item ].SetActive( false );
-						read_card = true;
-						++current_item;
 						if ( Input.anyKey )
 						{
 							cards[ current_item ].SetActive( false );
